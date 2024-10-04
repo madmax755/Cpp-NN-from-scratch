@@ -1,0 +1,4 @@
+auto type for automatic type deduction
+references are helpful in fore (each) loops so act like normal rather than the elemetn being assigned a new (unrelated to the iterate) variable 
+emplace_back() is like push_back() but can pass parameters directly to the constructor e.g. neurons.emplace_back(0, "hi", 4) is the same as neurons.push_back(Neuron(0, "hi", 4)) if neurons has type std::vector<Neuron> but avoids creating a temporary object
+cant use cout directly on a vector (duh), iterate through and do manually
