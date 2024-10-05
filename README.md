@@ -1,4 +1,4 @@
-## Learning C++ via the implementation of various feed-forward NNs.
+## Learning C++ via the implementation of various NNs.
 
 ### Todo:
 - implement various training algorithms (SGD, Adam, etc.)
