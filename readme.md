@@ -8,6 +8,7 @@
 
 - Ability to select activation functions for each layer
 - Multithreaded training using stochastic gradient descent
+- Ability to save and load model to/from a binary file
 - Mnist accuracy incoming 
 
 
