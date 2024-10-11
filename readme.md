@@ -7,13 +7,13 @@
     - Matrix class (containing matrix methods e.g. addition, multiplication, transpostition, hadamard...)
 
 - Ability to select activation functions for each layer
-- Multithreaded training using stochastic gradient descent
+- Multithreaded training
+- SGD, Momentum, and Nesterov accelerated gradient training methods 
 - Ability to save and load model to/from a binary file
-- Mnist accuracy incoming 
 
 
 ### Todo:
-- implement various training algorithms (Adam, momentum, nesterov momentum etc.)
+- implement various training algorithms (Adam)
 - implement various regularisation techniques (dropout, cost func penalty for large weights)
 - test mnist accuracy
 - implement various matrix multiplication optimisations (SIMD instructions, chunked eval, etc.)
