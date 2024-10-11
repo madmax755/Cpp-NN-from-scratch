@@ -13,7 +13,8 @@
 
 
 ### Todo:
-- implement various training algorithms (SGD, Adam, etc.)
+- implement various training algorithms (Adam, momentum, nesterov momentum etc.)
+- implement various regularisation techniques (dropout, cost func penalty for large weights)
 - test mnist accuracy
 - implement various matrix multiplication optimisations (SIMD instructions, chunked eval, etc.)
 - implement various neural network architechtures (LSTMs, RNNs for financial data; CNN for some image data)
