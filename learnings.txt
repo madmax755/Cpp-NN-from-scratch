@@ -5,3 +5,5 @@ cant use cout directly on a vector (duh), iterate through and do manually
 when overloading a binary operator, if the overloading is defined in the class on which the overloading is to be performed, the first item is implicitly passed into the method, so only the other item needs to be specified as a parameter.
 do not need to dereference a function to call it. e.g. double func* function; func("hi") is fine. explicit dereferencing can be done (*func)("hello") but not necessary
 types are inferred in some circumstances i.e. vector<vector<int>> container; container.push_back({{8}, {4}}) is fine - no need to specify the type (although you can)
+relu training requires much lower learning rate for reliable training with SGD
+relu does not like NAG (parameter space not smooth enough?), but likes Adam.

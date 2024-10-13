@@ -13,6 +13,7 @@
 
 
 ### Todo:
+- implement full matrix training (more than one example at a time)
 - implement various training algorithms (Adam)
 - implement various regularisation techniques (dropout, cost func penalty for large weights)
 - test mnist accuracy
