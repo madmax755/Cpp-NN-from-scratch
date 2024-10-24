@@ -7,3 +7,4 @@ do not need to dereference a function to call it. e.g. double func* function; fu
 types are inferred in some circumstances i.e. vector<vector<int>> container; container.push_back({{8}, {4}}) is fine - no need to specify the type (although you can)
 relu training requires much lower learning rate for reliable training with SGD
 relu does not like NAG (parameter space not smooth enough?), but likes Adam.
+you can unpack a struct into multiple variables with auto [a, b] = my_struct;
