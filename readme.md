@@ -13,8 +13,8 @@
 
 
 ### Todo:
-- implement full matrix training (more than one example at a time)
-- implement a more general approach loss functions (and their derivatives for training)
+- implement full matrix training (more than one example at a time) and consolidate current multithreaded approach.
+- ~~implement a more general approach loss functions (and their derivatives for training)~~
 - implement various regularisation techniques (dropout, cost func penalty for large weights)
 - implement various matrix multiplication optimisations (SIMD instructions, chunked eval, etc.)
 - implement various neural network architechtures (LSTMs, RNNs for financial data; CNN for some image data)
