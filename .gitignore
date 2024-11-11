@@ -1,3 +1,4 @@
 gru blog.md
 mnist_training_metrics.csv
 GRU/.env
+.vscode
