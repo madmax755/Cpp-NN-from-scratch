@@ -12,3 +12,4 @@
 - order of conditions in if statements is important e.g. if (!layers.empty() && dynamic_cast<DenseLayer*>(layers.back().get())) is a valid solution to the undefined behaviour of layers.back() when layers is empty.
 - while base-type pointers and derived-type pointers can point to the same object, they are not the same type and should not be used interchangeably. e.g. if (dynamic_cast<DerivedType*>(base_pointer)) is not the same as if (dynamic_cast<BaseType*>(derived_pointer))
 - dynamic_cast can be used to check if a pointer is of a certain type and safely return a null pointer if it is not. e.g. ConvolutionLayer* conv_layer = dynamic_cast<ConvolutionLayer*>(layer); if (!conv_layer) { throw std::runtime_error("Layer is not a convolution layer"); }
+- the -> syntax is used to access members of a pointer to an object. e.g. layer->forward(input) is the same as (*layer).forward(input)
