@@ -1,29 +1,81 @@
-## Learning C++ via the implementation of various NNs.
+# Learning C++ via Neural Network Implementation
 
-### HaveDone:
-- Implemented a basic multilayer perceptron from scratch (no nn libraries)
-    - NeuralNetwork class (contains vector of Layer objects, training methods, and evaluation methods)
-    - Layer class (containing weight & bias Matrix objects and inference methods)
-    - Matrix class (containing matrix methods e.g. addition, multiplication, transpostition, hadamard...)
-    - Multithreaded training
-    - SGD, SGD+Momentum, Nesterov Accelerated Gradient, Adam, amd AdamW training methods.
-    - Ability to select activation functions for each layer
-    - Ability to save and load model to/from a binary file
+A collection of neural network architectures implemented from scratch in C++ for learning purposes.
 
-- Implemented a basic GRU from scratch (no nn libraries)
-    - GRUCell class (containing weights and biases, and inference/training methods)
-    - Matrix class (containing matrix methods e.g. addition, multiplication, transpostition, hadamard...)
-    - Predictor class (containing GRUCell object, output layer weights and biases, and inference/training methods)
+## Implemented Models
+
+### 1. Multilayer Perceptron (MLP)
+- Custom implementation without external ML libraries
+- Features:
+  - Flexible network topology with configurable layer sizes
+  - Multiple activation functions (ReLU, Sigmoid, Softmax)
+  - Advanced optimisers (SGD, SGD+Momentum, NAG, Adam, AdamW)
+  - Cross-entropy and MSE loss functions
+  - Multi-threaded training for improved performance
+  - Model serialisation (save/load functionality)
+  - Training metrics logging and visualisation
+  - Evaluation metrics (accuracy, precision, recall, F1 score)
+
+### 2. Gated Recurrent Unit (GRU)
+- Custom implementation for sequence processing
+- Features:
+  - Configurable input, hidden, and output dimensions
+  - Advanced optimisers (Adam, AdamW)
+  - Financial metrics for stock prediction (profit/loss, directional accuracy)
+  - Position sizing based on prediction confidence
+  - Batch processing capabilities
+  - Customisable sequence length
+
+### 3. Convolutional Neural Network (CNN)
+- Work in progress implementation
+- Features:
+  - Convolutional layers with configurable kernels
+  - Pooling layers (Max, Average)
+  - Dense layers for classification
+  - Same padding mode support
+  - Tensor3D class for efficient 3D data handling
+
+## Project Structure
+
+```text
+project/
+├── MLP/
+│   ├── nn.cpp            # MLP implementation
+│   └── mnist_data/       # MNIST dataset for testing
+├── GRU/
+│   ├── gru.cpp          # Basic GRU implementation
+│   ├── gru+mlp.cpp      # GRU with MLP output layer
+│   └── stock_data/      # Financial data for testing
+└── CNN/
+    └── cnn.cpp          # CNN implementation
+```
+
+## Todo
+1. Optimisations
+   - SIMD instructions for matrix operations
+   - Chunked matrix evaluation
+   - Full batch matrix training
+
+2. Model Improvements
+   - Dropout regularisation
+   - Batch normalisation
+   - Gradient clipping
+   - Additional loss functions
+   - Variable strides in CNN
+   - Additional padding modes in CNN
+
+3. Infrastructure
+   - Unified model interface
+   - Improved data loading pipeline
+   - Better test coverage
+   - Documentation generation
+
+## Learning Outcomes
+- See `learnings.md` for detailed C++ insights gained during implementation.
+- Understanding of NN architectures, how they work, and how to train them.
+
+## Requirements
+- C++ compiler with C++17 support
+- Standard Template Library (STL)
 
 
-### Todo:
-General:
-- implement full matrix training (more than one example at a time) and consolidate current multithreaded approach.
-- implement various regularisation techniques (dropout, cost func penalty for large weights (other than adamw))
-- implement various matrix multiplication optimisations (SIMD instructions, chunked eval, etc.)
-
-GRUs:
-- gradient clipping/checking
-- loss function classes
-- optimiser classes
-- test on stock price data
